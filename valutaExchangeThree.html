@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/valutaOmregner.css">
+    <script src="assets/js/valutaexchangeThree.js" defer></script>
+
+</head>
+
+<body>
+
+    <h1>valuta omregner svær opgave</h1>
+    <p>du skal skrive 3 funktioner <br>
+        <h3>funktion 1</h3>
+        hedder gatherInputData, og samler data fra dom, og sender den videre til en funktion der hedder makeExchange. Den skal sende 3 værdier: <br>
+        Euro Rate, Dollar Rate og beløbet i danske kroner. <br><br>
+
+        Du kan bruge koden her til at samle info fra dom:
+        <pre>
+            <code>
+        
+                    const myEuroRate = document.getElementById('euroRate').value;
+                    const myDollarRate = document.getElementById('dollarRate').value;
+                
+                    const myDanishAmount = document.getElementById('danishAmount').value;
+        
+                   
+                
+            
+        </code>
+        </pre>
+
+<h3>funktion 2</h3>
+en funktion der hedder makeExchange der kalder en funktion 2 gange med forskellige veksel rater fra modtaget data.
+    </p>
+    <ul>
+        <li>beløb i danske kroner</li>
+        <li>veksel rate som komma tal eks 1.3</li>
+    </ul>
+<br>
+    <h3>funktion 3</h3>
+    <p>du skal skrive en funktion der returnerer et veksel resultat udfra de tilsendte værdier.
+    </p>
+    <p>Funktionen skal hedde calculateExchange og skal modtage 2 værdier</p>
+   
+    <ul>
+        <li>beløb i danske kroner</li>
+        <li>veksel rate som komma tal eks 1.3</li>
+    </ul>
+  
+
+    <br> <br>
+    <p>du skal skrive dine funktioner  i filen valutaexchangeThree.js</p>
+
+
+
+
+
+    <p>husk at bruge din konsol, og check errors!</p>
+    
+    <section class="assignmentArea">
+
+    <h2>form der bruger koden</h2>
+
+    <form>
+        <label for="eurorate">Euro rate:</label><br>
+        <input type="text" id="euroRate" name="eurorate" value="1.3"><br>
+        <label for="dollarrate">Dollar rate:</label><br>
+        <input type="text" id="dollarRate" name="dollarrate" value="7.1"><br>
+
+
+        <label for="danish">Danske kroner:</label><br>
+        <input type="text" id="danishAmount" name="danish"><br>
+
+
+        <button id="calculateButt">calculate</button>
+        <h2 id="result"></h2>
+    </form>
+</section>
+
+    <footer>
+        <nav>
+            <a href="index.html">back</a>
+        </nav>
+    </footer>
+
+</body>
+
+
+</body>
+
+</html>

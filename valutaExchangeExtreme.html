@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/valutaOmregner.css">
+
+    <script src="assets/js/valutaexchangeExtreme.js" defer></script>
+
+</head>
+
+<body>
+
+    <h1>valuta omregner extreme</h1>
+
+    <p>du skal skrive javascript der giver funktion til formen herunder.
+    </p>
+
+    <p>Formen har følgende funktioner:</p>
+    <ul>
+        <li>du kan indtaste euro rate i komma tal eks 1.4</li>
+        <li>du kan indtaste dollar rate i komma tal eks 1.4</li>
+        <li>du kan indtaste antal danske kroner</li>
+    </ul>
+    <p>  knappen "calculate" skal kalde javascript der kan udregne dollar kurs og sende resultatet til en view kode som du kan se herunder:</p>
+
+
+
+
+<h3>view funktion kunne se sådan her ud:</h3>
+<pre>
+    <code>
+        function showResult(myEuroResult, myDollarResult, myDanishAmount) {
+            const resultElement = document.getElementById('result');
+            resultElement.innerHTML = myDanishAmount + ' danske kroner bliver til: ' + myEuroResult + ' euro og ' + myDollarResult + ' dollars';
+        
+        }
+    
+</code>
+</pre>
+
+<h3>Du kan evt finde og trigger knappen sådan her:</h3> 
+
+
+<pre>
+    <code>
+        // find knap i dom
+        const calculateButton = document.getElementById('calculateButt');
+
+        // event handler
+        calculateButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        //alert('Jeg vil gerne kalde en funktion der kan regne valutaen ud...');
+        gatherInputData();
+        }); 
+    
+</code>
+</pre>
+
+    <p>husk at bruge din konsol, og check errors!</p>
+    
+    <section class="assignmentArea">
+
+    <h2>form der bruger koden</h2>
+
+    <form>
+        <label for="eurorate">Euro rate:</label><br>
+        <input type="text" id="euroRate" name="eurorate" value="1.3"><br>
+        <label for="dollarrate">Dollar rate:</label><br>
+        <input type="text" id="dollarRate" name="dollarrate" value="7.1"><br>
+
+
+        <label for="danish">Danske kroner:</label><br>
+        <input type="text" id="danishAmount" name="danish"><br>
+
+
+        <button id="calculateButt">calculate</button>
+        <h2 id="result"></h2>
+    </form>
+</section>
+
+    <footer>
+        <nav>
+            <a href="index.html">back</a>
+        </nav>
+    </footer>
+
+</body>
+
+</html>
